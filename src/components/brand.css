@@ -1,0 +1,46 @@
+@keyframes run {
+  to {
+    stroke-dashoffset: 136;
+    stroke-width: 20;
+  }
+}
+@keyframes big {
+  0% {
+    stroke: #9d52ff;
+  }
+  50% {
+    stroke: #7e35de;
+  }
+
+  100% {
+    stroke: #9d52ff;
+  }
+}
+.container {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loading polygon {
+  animation: big 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.loading {
+  stroke-dasharray: 34;
+  stroke-dashoffset: 0; /*46*/
+  animation: run 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  transform: rotate(90deg);
+}
+h3.title {
+  font-size: 100px;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+}
+.animated-icon {
+  position: absolute;
+  margin-top: -55px;
+  margin-left: 34px;
+}
